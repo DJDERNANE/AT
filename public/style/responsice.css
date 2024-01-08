@@ -1,0 +1,61 @@
+@media screen and (max-width:1000px) {
+
+    .parent{
+        width: 97%;
+    }
+}
+@media screen and (max-width:900px) {
+    .parent{
+        flex-direction: column;
+        align-items: center;
+    }
+    .left_side{
+        position: relative;
+        height: max-content;
+        width: 92%;
+        margin: 20px auto;
+        padding: 20px 0px;
+        height: max-content;
+
+    }
+    .right_side{
+        margin-left: 0px;
+        width: 92%;
+        height: 90%;
+
+    }
+    .right_side h1{
+        font-size: 45px;
+    }
+    .right_side .header{
+        justify-content: flex-start;
+        top: 20px;
+        right: 15px;
+
+    }
+    .navigation{
+        display: none;
+    }
+
+    .skils-content div img{
+        width: 140px;
+        height: 190px;
+    }
+    .navigation.active{
+        display: flex;
+        background: transparent;
+    }
+    .navigation.active ul {
+        width: 100%;
+        background-color: rgba(25, 25, 25, 0.9);
+        backdrop-filter: blur(5px);
+    }
+     .navigation.active ul li a p{
+        color: white;
+    }
+    .navigation.active ul li a i{
+        color: #28E98C;
+    }
+
+
+}
