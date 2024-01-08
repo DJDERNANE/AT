@@ -1,0 +1,6 @@
+.modalbody {
+    display: flex;
+}
+.modalbody img{
+    margin-right: 20px;
+}

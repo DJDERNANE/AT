@@ -1,0 +1,24 @@
+#contact-section {
+    width: 100%;
+    padding: 60px 5%;
+}
+.service{
+    background-color: #F5F5F5;
+}
+.service img{
+    width: 150px;
+    height: 150px;
+}
+.service h1{
+    font-size: 25px;
+}
+.service p{
+    color: #9B2DD1;
+    font-size: 14px;
+}
+.service button{
+    color: white;
+    background-color: #2C5EAA;
+    width: 170px;
+    text-align: center;
+}

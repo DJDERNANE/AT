@@ -1,0 +1,19 @@
+.dico span:first-child{
+    background-color: #2C5EAA;
+    height: 3px;
+    width: 100%;
+    border-radius: 7px;
+}
+.dico span:nth-child(2){
+    background-color: #20B471;
+    height: 3px;
+    width: 100%;
+    border-radius: 7px;
+}
+.dg{
+    color: #2240A4;
+}
+.word-dg{
+    font-size: 1.1rem;
+    text-align: justify;
+}

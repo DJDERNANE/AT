@@ -1,0 +1,15 @@
+img{
+    height: 80px;
+}
+h5{   
+    color: #344051;
+}
+h1{
+    font-family: 'Montserrat', sans-serif;
+    color: #001219;
+}
+@media screen and (max-width: 480px) {
+.home-section-content h1 {
+    font-size: 3rem;
+}  
+}

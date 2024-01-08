@@ -1,0 +1,1 @@
+export const Main_API = 'https://apitest.dernanedjilali.com/api';

@@ -1,0 +1,20 @@
+.services-wrapper {
+    padding: 0 10%;
+}
+.services-card h1 {
+    transition: .3s ease-in-out;
+    font-weight: 700;
+    font-size: 2.3rem;
+    color: #001219;
+}
+
+.btn{
+   background-color: #2C5EAA;
+   color: white;
+   font-size: 1.2rem;
+   width: 200px;
+}
+.btn-parent{
+    display: flex;
+    justify-content: center;
+}

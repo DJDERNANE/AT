@@ -1,0 +1,18 @@
+.services-card {
+    transition: .6s ease-in-out;
+    padding: 40px 40px 0;
+    width: 100%;
+    text-align: start;
+    position: relative;
+    
+}
+.services-card h3 {
+    transition: .3s ease-in-out;
+    color: #001219;
+}
+.services-card img{
+    height: 180px;
+}
+.desc{
+    color: #344051;
+}

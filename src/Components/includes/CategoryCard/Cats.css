@@ -1,0 +1,19 @@
+.cat{
+    background-color: #F8F2FF;
+}
+.cat h1{
+    font-size: 25px;
+}
+.cat p{
+    color: #9B2DD1;
+    font-size: 14px;
+}
+.cat button{
+    color: white;
+    background-color: #2C5EAA;
+    width: 170px;
+    text-align: center;
+}
+.cat img{
+    width: 100%;
+}

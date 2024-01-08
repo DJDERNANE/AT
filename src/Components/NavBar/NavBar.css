@@ -1,0 +1,119 @@
+.navbar{
+  transition: .3s ease-in-out;
+  z-index: 100;
+  position: fixed;
+  height: 85px;
+  width: 100%;
+  top: 0;
+}
+.navbar.active{
+  height: max-content;
+}
+.navbar.scrolled{
+  background-color: rgba(255, 255, 255, 1); 
+}
+.navbar-logo img{
+  height: 60px;
+}
+
+.navbar-menu {
+  & > ul {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      color: white;
+      font-weight: 600;
+  }
+}
+
+.selected-nav {
+  position: relative;
+  color: white;
+  font-weight: bold;
+  &::after {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 2px;
+      background-color: white;
+      bottom: -4px;
+      left: 0;
+  }
+}
+
+.navbar-quote {
+  height: 45px;
+  color: white;
+  border-radius: 2px;
+  padding: 4px 25px;
+  background-color: blue;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+  border: 2px solid blue;
+  &:hover {
+      transition: 0.3s ease-in-out;
+      background-color: black;
+  }
+}
+
+.navbar-responsive-menu {
+  color: white;
+  font-size: 1.3rem;
+  position: relative;
+}
+
+.navbar-responsive-menu::after {
+  content: "";
+  left: -50%;
+  position: absolute;
+  height: 120%;
+  top: -10%;
+  width: 200%;
+  border-radius: 4px;
+  border: 1px solid rgba(128, 128, 128, 0.4); /* Corrected color */
+}
+
+.navbar-dropped {
+  background: rgba(255, 255, 255, 0.88);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(7.5px);
+  -webkit-backdrop-filter: blur(7.5px);
+}
+
+.navbar-dropped .selected-nav {
+  color: blue !important;
+  &::after {
+      background-color: blue;
+  }
+}
+
+.navbar-dropped li {
+  color: black !important;
+}
+.navbar li select{
+  color: white;
+  background-color: transparent;
+  border: none;
+  font-size: 1.3rem;
+  outline: none;
+}
+.navbar.scrolled li select{
+  color: black;
+}
+.navbar-dropped a {
+  color: black !important;
+}
+
+.navbar-dropped .navbar-responsive-menu {
+  color: black;
+  &::after {
+      border: 1px solid rgba(128, 128, 128, 0.66); /* Corrected color */
+  }
+}
+
+.navbar-dropped .navbar-quote:hover {
+  transition: 0.3s ease-in-out;
+  background-color: white !important;
+  color: black;
+}
