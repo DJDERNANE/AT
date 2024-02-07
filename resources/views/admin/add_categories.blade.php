@@ -66,12 +66,16 @@
         {{'Add Category'}}
     @endsection
     @section('content')
-    <form action="{{route('cats.store')}}" method="post" class="product-form">
+    <form action="{{route('cats.store')}}" method="post" enctype="multipart/form-data" class="product-form">
         @csrf
         <h1>ADD Category</h1>
         <div class="form-group">
             <label for="name">Category name :</label>
             <input type="text" name="name" id="Category-name" >
+        </div>
+        <div class="form-group">
+            <label for="">Category picture :</label>
+            <input type="file" name="picture" id="Category-picture" >
         </div>
 
         <button type="submit" class="form-button btn btn-primary">Save</button>

@@ -9,7 +9,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 class Startup extends Authenticatable
 {
     use HasFactory;
-    protected $fillable = ['logo','token','password','fullname','email','phone','startup', 'creation_date', 'catid','wilaya','label', 'website', 'socialmedia' , 'desc'];
+    protected $fillable = ['valid','logo','token','password','fullname','email','phone','startup', 'creation_date', 'catid','wilaya','label', 'website', 'socialmedia' , 'desc'];
 
     public function Category(){
         return $this->belongsTo(Category::class);

@@ -8,9 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Category extends Model
 {
     use HasFactory;
-    protected $fillable = ['name'];
+    protected $fillable = ['name', 'picture'];
 
     public function Startups(){
-        return $this->hasMany(Startup::class);
+        return $this->hasMany(Startup::class, 'catid');
     }
 }

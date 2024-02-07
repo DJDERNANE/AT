@@ -2,8 +2,10 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\MessageController;
 use App\Http\Controllers\StartupsController;
-use App\Http\Controllers\Startup\StartupController;
+use App\Http\Controllers\NewsController;
+use App\Http\Controllers\Startup\startupController;
 use App\Http\Controllers\Startup\serviceController;
 use Illuminate\Support\Facades\Route;
 
@@ -31,6 +33,10 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
     // Categories
+    Route::get('/msgs', [MessageController::class, 'index'])->name('msgs');
+    Route::get('/msgs/show/{msg?}', [MessageController::class, 'show'])->name('msgs.show');
+    Route::delete('/msgs/delete/{msgs?}', [MessageController::class, 'destroy'])->name('msgs.destroy');
+
     Route::get('/categories', [CategoryController::class, 'index'])->name('cats');
     Route::get('/categories/add', [CategoryController::class, 'create'])->name('cats.add');
     Route::post('/categories', [CategoryController::class, 'store'])->name('cats.store');
@@ -42,7 +48,13 @@ Route::middleware('auth')->group(function () {
     Route::delete('/startups/delete/{startup?}', [StartupsController::class, 'destroy'])->name('startups.destroy');
     Route::get('/startups/show/{startup?}', [StartupsController::class, 'show'])->name('startups.show');
 
-    
+    Route::get('/startups/activate/{startup?}', [StartupsController::class, 'activate'])->name('startups.activate');
+    Route::get('/startups/desactivate/{startup?}', [StartupsController::class, 'desactivate'])->name('startups.desactivate');
+    //news
+    Route::get('/news', [NewsController::class, 'index'])->name('news');
+    Route::get('/news/add', [NewsController::class, 'create'])->name('news.add');
+    Route::post('/news/store', [NewsController::class, 'store'])->name('news.store');
+    Route::delete('/news/delete/{news?}', [NewsController::class, 'destroy'])->name('news.destroy');
       
 });
 // Startup of Client 

@@ -97,6 +97,23 @@
                                 </a>
 
                             </li>
+
+                            <li class="sidebar-header" style="font-size: 18px;">
+                                <a href="{{route('news')}}">
+                                    <span>
+                                        News
+                                    </span>
+                                </a>
+
+                            </li>
+                            <li class="sidebar-header" style="font-size: 18px;">
+                                <a href="{{route('msgs')}}">
+                                    <span>
+                                        Messages
+                                    </span>
+                                </a>
+
+                            </li>
                           
                         </ul>
                     </div>

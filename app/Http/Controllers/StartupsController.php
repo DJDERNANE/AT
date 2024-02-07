@@ -85,4 +85,18 @@ class StartupsController extends Controller
         $startup->delete();
         return redirect('/startups');
     }
+    public function activate($startup)
+    {
+        $startup = Startup::find($startup);
+        $startup->valid = true;
+        $startup->save();
+        return redirect('/startups');
+    }
+    public function desactivate($startup)
+    {
+        $startup = Startup::find($startup);
+        $startup->valid = false;
+        $startup->save();
+        return redirect('/startups');
+    }
 }

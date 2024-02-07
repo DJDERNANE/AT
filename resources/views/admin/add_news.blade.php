@@ -12,7 +12,7 @@
         background-color: #fff;
         border-radius: 5px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        pEditing: 20px;
+        padding: 20px;
         max-width: 600px;
         margin: 0 auto;
     }
@@ -34,7 +34,7 @@
     .form-group input[type="number"],
     .form-group input[type="file"],
     select {
-        pEditing: 10px;
+        padding: 10px;
         border: 1px solid #ccc;
         border-radius: 5px;
         font-size: 16px;
@@ -46,7 +46,7 @@
         color: #0069d9;
         border: #0069d9 solid 2px;
         border-radius: 5px;
-        pEditing: 10px 20px;
+        padding: 10px 20px;
         font-size: 18px;
         cursor: pointer;
         transition: all 0.5s ease;
@@ -63,21 +63,30 @@
 
 <x-app-layout>
     @section('title')
-        {{'Edit Category'}}
+        {{'Add News'}}
     @endsection
     @section('content')
-    <form action="{{route('cats.update',$cat->id)}}" method="post" enctype="multipart/form-data" class="product-form">
+    <form action="{{route('news.store')}}" method="post" enctype="multipart/form-data" class="product-form">
         @csrf
-        @method('PUT')
-        <h1>Edit Category</h1>
+        <h1>ADD News</h1>
         <div class="form-group">
-            <label for="name">Category name :</label>
-            <input type="text" name="name" id="Category-name" value="{{$cat->name}}">
+            <label for="name">Title:</label>
+            <input type="text" name="title" id="Title-name" >
         </div>
         <div class="form-group">
-            <label for="picture">Change Category picture ?  :</label>
-            <input type="file" name="picture" id="Category-picture" >
+            <label for="">Description:</label>
+            <textarea name="desc" id="" cols="30" rows="10"></textarea>
         </div>
+        <div class="form-group">
+            <label for="date">Date:</label>
+            <input type="date" name="date" id="date" >
+        </div>
+
+        <div class="form-group">
+            <label for="name">Picture:</label>
+            <input type="file" name="picture" >
+        </div>
+
         <button type="submit" class="form-button btn btn-primary">Save</button>
     </form>
 @endsection

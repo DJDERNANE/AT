@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('startups', function (Blueprint $table) {
             $table->id();
             $table->string('fullname');
+            $table->boolean('valid')->default(false);
             $table->string('email');
             $table->string('phone');
             $table->string('startup');

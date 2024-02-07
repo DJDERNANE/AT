@@ -36,10 +36,16 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
-        Category::create([
-            'name'=> $request->name
-        ]);
-        return redirect('/categories');
+        if($request->hasFile('picture')){
+            $imageName = $request->file('picture')->getClientOriginalName();
+            $image = $request->file('picture')->storeAs('./cats',$imageName,'pictures');
+            Category::create([
+                'name'=> $request->name,
+                'picture' => $imageName
+            ]);
+           
+          }
+          return redirect('/categories');
     }
 
     /**
@@ -75,9 +81,19 @@ class CategoryController extends Controller
      */
     public function update(Request $request, Category $catid)
     {
-        $catid->update([
-            'name' => $request->name
-        ]);
+        if($request->hasFile('picture')){
+            $imageName = $request->file('picture')->getClientOriginalName();
+            $image = $request->file('picture')->storeAs('./cats',$imageName,'pictures');
+            $catid->update([
+                'name' => $request->name,
+                'picture' => $imageName
+            ]);
+          }else{
+            $catid->update([
+                'name' => $request->name
+            ]);
+          }
+        
         return redirect('/categories');
     }
 
